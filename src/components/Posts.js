@@ -6,21 +6,24 @@ const infosPosts = [
         userName: "mateus",
         urlContent: "assets/img-posts/gato-telefone1.png",
         urlLikedByUser: "assets/img-posts-user/respondeai2.png",
-        nameLikedByUser: "respondeai"
+        nameLikedByUser: "respondeai",
+        numberOfLikes: "101.523"
     },
     {
         userImg: "assets/img-posts-user/meowed2.png",
         userName: "meowed",
         urlContent: "assets/img-posts/dog1.png",
         urlLikedByUser: "assets/img-posts-user/respondeai2.png",
-        nameLikedByUser: "respondeai"
+        nameLikedByUser: "respondeai",
+        numberOfLikes: "10.523"
     },
     {
         userImg: "assets/img-posts-user/meowed2.png",
         userName: "meowed",
         urlContent: "assets/img-posts/gato-telefone1.png",
         urlLikedByUser: "assets/img-posts-user/respondeai2.png",
-        nameLikedByUser: "respondeai"
+        nameLikedByUser: "respondeai",
+        numberOfLikes: "1.523"
     },   
 ];
 
@@ -65,7 +68,7 @@ function CreatePost(props) {
                 </div>
                 <div className="info-post">
                     <img src={props.urlLikedByUser} alt="respondeai2" />
-                    <span>Curtido por <strong>{props.nameLikedByUser}</strong> e <strong>outras 101.523 pessoas</strong></span>
+                    <span>Curtido por <strong>{props.nameLikedByUser}</strong> e <strong>outras {props.numberOfLikes} pessoas</strong></span>
                 </div>
             </div>
         </div>
@@ -75,7 +78,7 @@ function CreatePost(props) {
 export default function Posts() {
     return (
         <div className="posts">
-            {infosPosts.map(post => <CreatePost userName= {post.userName} urlUserImg= {post.userImg} urlContent={post.urlContent} urlLikedByUser={post.urlLikedByUser} nameLikedByUser={post.nameLikedByUser}></CreatePost>)}
+            {infosPosts.map(post => <CreatePost userName= {post.userName} urlUserImg= {post.userImg} urlContent={post.urlContent} urlLikedByUser={post.urlLikedByUser} nameLikedByUser={post.nameLikedByUser} numberOfLikes={post.numberOfLikes}></CreatePost>)}
         </div>
     );
 }
