@@ -5,12 +5,12 @@ import SideBarFixed from "./SideBarFixed";
 export default function Main() {
     return (
         <main>
-            <div class="conteudo">
-                <div class="bar">
+            <div className="conteudo">
+                <div className="bar">
                     <Stories />
                     <Posts />
                 </div>
-                <div class="sidebar">
+                <div className="sidebar">
                     <SideBarFixed />
                 </div>
             </div>

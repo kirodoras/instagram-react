@@ -39,11 +39,11 @@ const infosStories = [
 
 function CreateStorie(props) {
     return (
-        <div class="content">
-            <div class="img-container">
+        <div className="content">
+            <div className="img-container">
                 <img src={props.urlImg} alt={props.title} />
             </div>
-            <div class="text-container">
+            <div className="text-container">
                 {props.title}
             </div>
         </div>
@@ -52,7 +52,7 @@ function CreateStorie(props) {
 
 export default function Stories() {
     return (
-        <div class="stories">
+        <div className="stories">
             <div class="story-container">
                 {infosStories.map(storie => <CreateStorie title={storie.title} urlImg={storie.img}></CreateStorie>)}
             </div>

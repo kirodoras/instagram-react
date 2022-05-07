@@ -385,6 +385,13 @@ footer {
 }
 /*NONE-END*/
 
+.red {
+    color: #ed4956;
+}
+.black {
+    color: black;
+}
+
 @media (max-width: 935px) {
     .cabecalho {
         padding: 0px 10px 0px 10px;

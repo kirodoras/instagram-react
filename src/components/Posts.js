@@ -1,3 +1,5 @@
+import React from 'react';
+
 const infosPosts = [
     {
         userImg: "assets/img-posts-user/meowed2.png",
@@ -23,20 +25,37 @@ const infosPosts = [
 ];
 
 function CreatePost(props) {
+    //LOGIC
+    /*const [like, setLike] = React.useState(false);
+    const [color, setColor] = React.useState('');
+
+    function teste (){
+        if(like){
+            setColor('');
+            setLike(false);
+            console.log('2');
+        }else{
+            setColor(<ion-icon name="heart-outline" class="red"></ion-icon>);
+            setLike(true);
+            console.log('1');
+        }
+    }*/
+
+    //UI
     return (
-        <div class="post">
-            <div class="header-post">
-                <div class="user-post">
+        <div className="post">
+            <div className="header-post">
+                <div className="user-post">
                     <img src={props.urlUserImg} alt={props.userName} />
                     {props.userName}
                 </div>
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
-            <div class="img-post">
-                <img src={props.urlContent} width="100%" autoplay muted loop></img>
+            <div className="img-post">
+                <img src={props.urlContent} width="100%" alt="{props.userName}"></img>
             </div>
-            <div class="footer-post">
-                <div class="interaction-post">
+            <div className="footer-post">
+                <div className="interaction-post">
                     <div>
                         <ion-icon name="heart-outline"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -44,7 +63,7 @@ function CreatePost(props) {
                     </div>
                     <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
-                <div class="info-post">
+                <div className="info-post">
                     <img src={props.urlLikedByUser} alt="respondeai2" />
                     <span>Curtido por <strong>{props.nameLikedByUser}</strong> e <strong>outras 101.523 pessoas</strong></span>
                 </div>
@@ -55,7 +74,7 @@ function CreatePost(props) {
 
 export default function Posts() {
     return (
-        <div class="posts">
+        <div className="posts">
             {infosPosts.map(post => <CreatePost userName= {post.userName} urlUserImg= {post.userImg} urlContent={post.urlContent} urlLikedByUser={post.urlLikedByUser} nameLikedByUser={post.nameLikedByUser}></CreatePost>)}
         </div>
     );

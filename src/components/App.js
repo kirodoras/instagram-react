@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 export default function App (){
     return (
-        <div class="pagina">
+        <div className="pagina">
             <Header />
             <Main />
             <Footer />
