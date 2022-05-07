@@ -29,7 +29,7 @@ const infosPosts = [
 
 function CreatePost(props) {
     //LOGIC
-    /*const [like, setLike] = React.useState(false);
+    const [like, setLike] = React.useState(false);
     const [color, setColor] = React.useState('');
 
     function teste (){
@@ -38,11 +38,11 @@ function CreatePost(props) {
             setLike(false);
             console.log('2');
         }else{
-            setColor(<ion-icon name="heart-outline" class="red"></ion-icon>);
+            setColor('red');
             setLike(true);
             console.log('1');
         }
-    }*/
+    }
 
     //UI
     return (
@@ -54,13 +54,13 @@ function CreatePost(props) {
                 </div>
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
-            <div className="img-post">
+            <div className="img-post" onClick={teste}>
                 <img src={props.urlContent} width="100%" alt="{props.userName}"></img>
             </div>
             <div className="footer-post">
                 <div className="interaction-post">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="heart-outline" class={color}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>

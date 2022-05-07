@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+ion-icon {
+    visibility: visible !important;
+}
+
 :root {
     --largura: 935px;
     --font-padrao: 'Roboto', sans-serif;
@@ -387,9 +391,7 @@ footer {
 
 .red {
     color: #ed4956;
-}
-.black {
-    color: black;
+    visibility: visible;
 }
 
 @media (max-width: 935px) {
@@ -406,7 +408,7 @@ footer {
 
 @media (max-width: 614px) {
     /*HEADER-MOBILE*/
-    .cabecalho-esquerda img, .cabecalho-direita ion-icon:not(:first-child), .mini-borda, .cabecalho input{
+    .cabecalho-esquerda img, .cabecalho-direita > ion-icon:not(:first-child), .mini-borda, .cabecalho input{
         display: none;
     }
     .logo-mobile {
