@@ -231,6 +231,7 @@ main {
 }
 
 .user-post img{
+    max-width: 32px;
     margin-right: 15px;
 }
 
@@ -266,6 +267,7 @@ main {
     line-height: 16px;
 }
 .info-post img{
+    max-width: 20px;
     margin-right: 5px;
 }
 .info-post strong{
