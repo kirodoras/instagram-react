@@ -27,13 +27,13 @@ const suggestionUserInfo = [
     },
 ];
 
-function User() {
+function User(props) {
     return (
         <div class="user">
-            <img src={userInfo.urlUserImg} alt="Imagem do usuario" />
+            <img src={props.urlUserImg} alt="Imagem do usuario" />
             <div class="user-name">
-                <h3>{userInfo.userName}</h3>
-                <h4>{userInfo.userDes}</h4>
+                <h3>{props.userName}</h3>
+                <h4>{props.userDes}</h4>
             </div>
         </div>
     );
@@ -59,7 +59,7 @@ function CreateSuggestionUser(props) {
 export default function SideBarFixed() {
     return (
         <div class="sidebar-fixed">
-            <User />
+            <User urlUserImg={userInfo.urlUserImg} userName={userInfo.userName} userDes={userInfo.userDes}/>
             <div class="suggestions">
                 <div class="suggestions-see-all">
                     <p>Sugestões para você</p>
